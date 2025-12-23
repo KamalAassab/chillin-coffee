@@ -1,6 +1,6 @@
 # ☕ Chillin Coffee
 
-### The First Art Coffee In Morocco - Casablanca, Maarif
+### The First Art Coffee In Morocco - Casablanca
 
 [![Next.js](https://img.shields.io/badge/Next.js-15.0-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
@@ -12,7 +12,7 @@
 
 ## 📖 About The Project
 
-**Chillin Coffee** is a premium entertainment and coffee destination located in the heart of Maarif, Casablanca. We offer a unique fusion of high-quality artisan coffee, next-gen gaming (PS5), classic board games, professional billiard & snooker tables, and a vibrant atmosphere featuring live music, karaoke, and showcases.
+**Chillin Coffee** is a premium entertainment and coffee destination located in the heart of Casablanca. We offer a unique fusion of high-quality artisan coffee, next-gen gaming (PS5), classic board games, professional billiard & snooker tables, and a vibrant atmosphere featuring live music, karaoke, and showcases.
 
 This website is a high-performance Next.js application designed to showcase our diverse offerings and provide a seamless experience for our community.
 

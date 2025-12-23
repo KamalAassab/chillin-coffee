@@ -102,7 +102,7 @@ export default function MenuSection() {
                 >
                     <Image
                         src="/menu-chillin.webp"
-                        alt="Chillin Coffee Maarif Casablanca - Full Menu and Specialty Drinks"
+                        alt="Chillin Coffee Casablanca - Full Menu and Specialty Drinks"
                         width={1920}
                         height={1080}
                         className="object-contain w-full h-auto"

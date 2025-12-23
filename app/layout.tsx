@@ -39,26 +39,26 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: {
     default: "Chillin Coffee | Premium Art Coffee & Entertainment Hub in Casablanca",
-    template: "%s | Chillin Coffee Maarif",
+    template: "%s | Chillin Coffee Casablanca",
   },
-  description: "Experience the ultimate chill at Chillin Coffee, Casablanca's premier art coffee destination. Discover artisan coffee, professional Billiard & Snooker, PS5 lounge, 50+ Board Games, Karaoke, and Live Shows in Maarif. Open daily 10h-00h.",
+  description: "Experience the ultimate chill at Chillin Coffee, Casablanca's premier art coffee destination. Discover artisan coffee, professional Billiard & Snooker, PS5 lounge, 50+ Board Games, Karaoke, and Live Shows in Casablanca. Open daily 10h-00h.",
   keywords: [
     "Chillin Coffee",
-    "Best Coffee Maarif Casablanca",
+    "Best Coffee Casablanca",
     "Gaming Cafe Casablanca",
     "Billiard Casablanca",
-    "Snooker Club Maarif",
+    "Snooker Club Casablanca",
     "Art Coffee Morocco",
-    "PlayStation 5 Lounge Maarif",
+    "PlayStation 5 Lounge Casablanca",
     "Board Game Cafe Casablanca",
     "Live Music Cafe Morocco",
     "Karaoke Night Casablanca",
-    "Coworking Space Maarif",
+    "Coworking Space Casablanca",
     "Entertainment Hub Casablanca",
     "29 Rue Al Woroud",
     "Moroccan Coffee Culture",
     "Chillin Vibe Cafe",
-    "Nightlife Maarif",
+    "Nightlife Casablanca",
     "Student Study Spot Casablanca"
   ],
   authors: [{ name: "Chillin Coffee", url: "https://chillin-coffee.vercel.app" }],
@@ -78,7 +78,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://chillin-coffee.vercel.app",
     siteName: "Chillin Coffee Casablanca",
-    title: "Chillin Coffee | Art, Gaming & Billiard in Maarif",
+    title: "Chillin Coffee | Art, Gaming & Billiard in Casablanca",
     description: "Your creative escape in Casablanca. Artisan drinks, professional gaming, and the best chill vibes in Morocco. Join us for coffee, gaming, and live entertainment.",
     images: [
       {

@@ -1,7 +1,7 @@
 {
   "name": "Chillin Coffee",
   "short_name": "Chillin",
-  "description": "Casablanca's premier art coffee hub. Artisan drinks, PS5 lounge, Billiard, and Live Shows in Maarif.",
+  "description": "Casablanca's premier art coffee hub. Artisan drinks, PS5 lounge, Billiard, and Live Shows.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#09090B",
