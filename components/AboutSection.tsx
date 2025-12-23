@@ -265,7 +265,7 @@ export default function AboutSection() {
                                 // removed autoPlay
                                 loop
                                 playsInline
-                                preload="metadata"
+                                preload="auto"
                                 className="w-full h-full object-cover"
                                 title="Chillin Coffee Atmosphere - Artisan Coffee, Gaming, and Billiard in Casablanca"
                                 aria-label="A video showing the atmospheric environment of Chillin Coffee café"

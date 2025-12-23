@@ -70,7 +70,8 @@ const GalleryColumn = ({
                                         fill
                                         className="object-cover group-hover:scale-110 transition-transform duration-300"
                                         sizes="(max-width: 768px) 50vw, 33vw"
-                                        loading="lazy"
+                                        priority={i < 2}
+                                        loading={i < 2 ? undefined : "lazy"}
                                         quality={60}
                                         placeholder="blur"
                                         blurDataURL={blurDataURL}
