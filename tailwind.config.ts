@@ -18,15 +18,15 @@ const config: Config = {
 		extend: {
 			fontFamily: {
 				sans: [
-					'Blackout Oldskull',
+					'var(--font-blackout)',
 					'fantasy'
 				],
 				display: [
-					'Blackout Oldskull',
+					'var(--font-blackout)',
 					'fantasy'
 				],
 				menu: [
-					'Blackout Oldskull',
+					'var(--font-blackout)',
 					'fantasy'
 				],
 				body: [

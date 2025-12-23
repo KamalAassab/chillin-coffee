@@ -2,77 +2,116 @@
 
 import Image from "next/image";
 import { CalendarDays, Coffee } from "lucide-react";
-
+import { motion } from "framer-motion";
 
 export default function HeroSection() {
+    return (
+        <section className="relative h-[100dvh] w-full overflow-hidden bg-zinc-950">
 
+            {/* Dynamic Background */}
+            <div className="absolute inset-0 z-0">
+                <motion.div
+                    className="relative w-full h-full"
+                    initial={{ scale: 1.1 }}
+                    animate={{ scale: 1 }}
+                    transition={{ duration: 10, ease: "easeOut" }}
+                >
+                    <Image
+                        src="/bg8.webp"
+                        alt="Chillin Coffee Atmosphere"
+                        fill
+                        className="object-cover object-center"
+                        priority
+                        quality={80}
+                        sizes="100vw"
+                    />
+                </motion.div>
 
-
-  return (
-    <section className="relative h-screen sm:min-h-screen flex items-end justify-center overflow-hidden bg-background">
-      {/* Dynamic Background */}
-      {/* Background Image & Overlay */}
-      <div className="absolute inset-0 w-full h-full z-0">
-        <Image
-          src="/bg8.webp"
-          alt="Chillin Coffee Casablanca - Premium Gaming and Art Coffee Atmosphere"
-          fill
-          className="object-cover object-center"
-          priority
-          quality={85}
-          sizes="100vw"
-          placeholder="blur"
-          blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
-        />
-        <div className="absolute inset-0 bg-black/30" />
-      </div>
-
-
-      <div className="container relative z-10 w-full flex flex-col justify-end px-3 sm:px-6 md:px-8 lg:px-12 pb-8 sm:pb-12 md:pb-16 lg:pb-20 pointer-events-none"> {/* Added pointer-events-none to container, will re-enable on interactive children */}
-
-        <div className="max-w-7xl pointer-events-auto w-full">
-          <div className="flex flex-col lg:flex-row items-start lg:items-end gap-3 sm:gap-5 md:gap-6 lg:gap-8">
-            {/* Main Heading */}
-            <h1
-              className="font-bold tracking-tighter text-white animate-fade-in [animation-delay:100ms] leading-[0.9] flex-1 min-w-0 w-full text-center md:text-left overflow-visible"
-            >
-              <span className="block text-6xl sm:text-8xl md:text-8xl lg:text-9xl xl:text-[11rem] 2xl:text-[13rem] whitespace-nowrap max-w-full font-display font-bold">Chillin Coffee</span>
-              <span className="block text-base sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl mt-2 sm:mt-3 md:mt-4 font-display font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-red-400 whitespace-nowrap">The First Art Coffee In Morocco</span>
-            </h1>
-
-            {/* CTA Buttons */}
-            <div
-              className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 sm:gap-3 opacity-0 animate-fade-in [animation-delay:300ms] flex-shrink-0 lg:mb-2 w-full sm:w-auto"
-            >
-              <a
-                href="#book"
-                onClick={(e) => {
-                  e.preventDefault();
-                  document.getElementById('book')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }}
-                className="group relative px-4 py-2.5 sm:px-5 sm:py-3 md:px-6 md:py-3.5 rounded-xl bg-brand-blue text-white font-semibold text-xs sm:text-base md:text-base transition-all duration-300 hover:bg-brand-blue/90 hover:scale-105 hover:shadow-lg hover:shadow-brand-blue/50 active:scale-100 backdrop-blur-sm border border-brand-blue/20 flex items-center justify-center gap-2"
-              >
-                <CalendarDays className="w-3.5 h-3.5 sm:w-4 sm:h-4 transition-transform duration-300 group-hover:scale-110 flex-shrink-0" />
-                <span className="whitespace-nowrap">Book a Table</span>
-              </a>
-
-              <a
-                href="#menu"
-                onClick={(e) => {
-                  e.preventDefault();
-                  document.getElementById('menu')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }}
-                className="group relative px-4 py-2.5 sm:px-5 sm:py-3 md:px-6 md:py-3.5 rounded-xl bg-brand-red text-white font-semibold text-xs sm:text-base md:text-base transition-all duration-300 hover:bg-brand-red/90 hover:scale-105 hover:shadow-lg hover:shadow-brand-red/50 active:scale-100 backdrop-blur-sm border border-brand-red/20 flex items-center justify-center gap-2"
-              >
-                <Coffee className="w-3.5 h-3.5 sm:w-4 sm:h-4 transition-transform duration-300 group-hover:scale-110 flex-shrink-0" />
-                <span className="whitespace-nowrap">See Our Menu</span>
-              </a>
+                {/* Cinematic Overlays */}
+                <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/20 to-transparent opacity-90" />
+                <div className="absolute inset-0 bg-gradient-to-r from-zinc-950/80 via-transparent to-transparent opacity-60" />
             </div>
-          </div>
-        </div>
-      </div>
 
-    </section>
-  );
+            {/* Main Content Container */}
+            <div className="relative z-10 w-full h-full container mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="flex flex-col h-full justify-end md:justify-center items-center pb-32 md:pb-0">
+
+                    <div className="max-w-6xl w-full flex flex-col items-center">
+                        {/* Animated Title Group */}
+                        <motion.div
+                            initial={{ opacity: 0, y: 30 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8, ease: "easeOut" }}
+                            className="space-y-2 md:space-y-4 text-center"
+                        >
+                            {/* Main Brand Title */}
+                            <h1 className="font-display font-bold text-5xl sm:text-7xl md:text-8xl lg:text-[10rem] xl:text-[12rem] leading-none text-white tracking-tighter drop-shadow-[0_10px_10px_rgba(0,0,0,0.8)] whitespace-nowrap">
+                                Chillin Coffee
+                            </h1>
+
+                            {/* Slogan */}
+                            <motion.p
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.8, delay: 0.3 }}
+                                className="font-body font-bold text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl tracking-wide mt-4 md:mt-8 drop-shadow-[0_4px_4px_rgba(0,0,0,0.8)] mx-auto"
+                            >
+                                The First Art Coffee In Morocco
+                            </motion.p>
+                        </motion.div>
+
+                        {/* Action Buttons */}
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.6, delay: 0.6 }}
+                            className="mt-8 md:mt-12 flex flex-row gap-3 sm:gap-6 w-auto justify-center"
+                        >
+                            <a
+                                href="#book"
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    document.getElementById('book')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                                }}
+                                className="group relative px-3 py-3 sm:px-8 sm:py-4 rounded-2xl bg-brand-blue/90 hover:bg-brand-blue text-white font-body font-semibold text-xs sm:text-lg transition-all duration-300 transform hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(27,79,216,0.4)] backdrop-blur-md flex items-center justify-center gap-2 sm:gap-3 overflow-hidden border border-brand-blue/20"
+                            >
+                                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-shine" />
+                                <CalendarDays className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" />
+                                <span className="whitespace-nowrap">Book a Table</span>
+                            </a>
+
+                            <a
+                                href="#menu"
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    document.getElementById('menu')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                                }}
+                                className="group relative px-3 py-3 sm:px-8 sm:py-4 rounded-2xl bg-white/5 hover:bg-white/10 text-white font-body font-semibold text-xs sm:text-lg transition-all duration-300 transform hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(255,255,255,0.1)] backdrop-blur-md flex items-center justify-center gap-2 sm:gap-3 border border-white/10"
+                            >
+                                <Coffee className="w-4 h-4 sm:w-5 sm:h-5 text-brand-red group-hover:text-white transition-colors flex-shrink-0" />
+                                <span className="whitespace-nowrap">Explore Menu</span>
+                            </a>
+                        </motion.div>
+                    </div>
+                </div>
+            </div>
+
+            {/* Scroll Indicator */}
+            <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 1.5, duration: 1 }}
+                className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2 pointer-events-none"
+            >
+                <span className="text-[10px] uppercase tracking-[0.2em] text-white/40 font-body">Scroll</span>
+                <div className="w-[1px] h-12 bg-gradient-to-b from-white/0 via-white/40 to-white/0 overflow-hidden">
+                    <motion.div
+                        className="w-full h-1/2 bg-white"
+                        animate={{ y: ["-100%", "100%"] }}
+                        transition={{ duration: 1.5, repeat: Infinity, ease: "linear" }}
+                    />
+                </div>
+            </motion.div>
+        </section>
+    );
 }
-

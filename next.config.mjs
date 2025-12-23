@@ -15,7 +15,19 @@ const nextConfig = {
   },
   experimental: {
     optimizeCss: true,
-    optimizePackageImports: ['framer-motion', 'lucide-react', '@radix-ui/react-accordion'],
+    optimizePackageImports: [
+      'framer-motion',
+      'lucide-react',
+      '@radix-ui/react-accordion',
+      '@radix-ui/react-dropdown-menu',
+      '@radix-ui/react-icons',
+      '@radix-ui/react-slot',
+      'gsap',
+      'react-aria-components',
+      'class-variance-authority',
+      'clsx',
+      'tailwind-merge'
+    ],
   },
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',

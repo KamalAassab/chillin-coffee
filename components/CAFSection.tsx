@@ -103,7 +103,7 @@ export default function CAFSection() {
                                 alt="Moroccan National Team Fan Zone - Live Football Screening at Chillin Coffee Casablanca"
                                 fill
                                 className="object-cover"
-                                quality={90}
+                                quality={80}
                             />
                             {/* Overlay glow */}
                             <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 to-transparent" />
@@ -116,7 +116,7 @@ export default function CAFSection() {
                                 alt="Watch Live CAF Matches in Casablanca - Support Dima Maghrib at Chillin Coffee"
                                 fill
                                 className="object-cover"
-                                quality={90}
+                                quality={80}
                             />
                             {/* Overlay glow */}
                             <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 to-transparent" />

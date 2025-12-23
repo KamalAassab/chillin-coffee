@@ -53,14 +53,16 @@ export default function FAQSection() {
     ];
 
     return (
-        <section id="faq" className="relative py-24 overflow-hidden [clip-path:inset(0)] bg-slate-950">
-            {/* Background */}
+        <section id="faq" className="relative py-24 overflow-hidden [clip-path:inset(0)]">
+            {/* Background Image */}
             <div className="absolute inset-0 z-0">
-                {/* Lighter gradient wash to tints but not hide the pattern */}
-                <div className="absolute inset-0 bg-gradient-to-b from-slate-950 via-slate-950/40 to-slate-950" />
-
-                {/* Subtle radial vignette to focus center, but less aggressive */}
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(2,6,23,0.7)_100%)]" />
+                <img
+                    src="/bg5.webp"
+                    alt=""
+                    className="w-full h-full object-cover"
+                    style={{ objectPosition: '50% 70%' }}
+                />
+                <div className="absolute inset-0 bg-black/70" />
             </div>
 
             <div className="mx-auto max-w-5xl px-4 md:px-6 relative z-10">
@@ -80,7 +82,7 @@ export default function FAQSection() {
                                 transition={{ duration: 0.6 }}
                                 className="mb-6 md:mb-8"
                             >
-                                <h2 className="w-fit block mx-auto text-6xl md:text-8xl font-display font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-500 to-red-600 whitespace-nowrap">Got Questions?</h2>
+                                <h2 className="w-fit block mx-auto md:mx-0 text-6xl md:text-8xl font-display font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-500 to-red-600 md:whitespace-nowrap md:pr-10">Got Questions?</h2>
                             </motion.div>
                             <p className="text-muted-foreground mt-4 font-body text-lg">
                                 Everything you need to know about visiting us.

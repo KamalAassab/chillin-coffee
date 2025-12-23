@@ -1,15 +1,11 @@
-@import url('https://fonts.cdnfonts.com/css/blackout-oldskull');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 3.9%;
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
     --card: 0 0% 100%;
     --card-foreground: 0 0% 3.9%;
     --popover: 0 0% 100%;
@@ -36,7 +32,7 @@
   }
 
   html {
-    font-family: 'Blackout Oldskull', fantasy !important;
+    font-family: var(--font-blackout), fantasy !important;
     font-weight: 400 !important;
   }
 
@@ -52,7 +48,7 @@
   h4,
   h5,
   h6 {
-    font-family: 'Blackout Oldskull', fantasy !important;
+    font-family: var(--font-blackout), fantasy !important;
     font-weight: 400 !important;
   }
 
@@ -150,7 +146,7 @@
   }
 
   .font-spice {
-    font-family: 'Bungee Spice', sans-serif !important;
+    font-family: var(--font-spice), sans-serif !important;
   }
 }
 

@@ -1,13 +1,33 @@
 import type { Metadata, Viewport } from "next";
-import dynamic from "next/dynamic";
+import localFont from "next/font/local";
+import { Poppins, Bungee_Spice } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./providers";
 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-
 import SmoothScrolling from "@/components/SmoothScrolling";
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-poppins",
+  display: "swap",
+});
+
+const bungeeSpice = Bungee_Spice({
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: "--font-spice",
+  display: "swap",
+});
+
+const blackout = localFont({
+  src: "./fonts/BlackoutOldskull.woff",
+  variable: "--font-blackout",
+  display: "swap",
+});
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -155,19 +175,14 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="manifest" href="/manifest.json" />
-        <link href="https://fonts.cdnfonts.com/css/blackout-oldskull" rel="stylesheet" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-        <style dangerouslySetInnerHTML={{ __html: `@import url('https://fonts.cdnfonts.com/css/blackout-oldskull');` }} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
       <body
-        className="selection:bg-brand-blue selection:text-white relative overflow-x-hidden"
-        style={{ fontFamily: "'Blackout Oldskull', fantasy" }}
+        className={`${poppins.variable} ${blackout.variable} ${bungeeSpice.variable} selection:bg-brand-blue selection:text-white relative overflow-x-hidden`}
+        style={{ fontFamily: "var(--font-blackout), fantasy" }}
       >
         <Providers>
           <SmoothScrolling>

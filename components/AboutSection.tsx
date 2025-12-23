@@ -32,13 +32,13 @@ export default function AboutSection() {
     const shouldResume = useRef(false);
 
     const features = [
-        { label: "Artisan Coffee & Drinks", icon: Coffee },
+        { label: "Artisan Coffee", icon: Coffee },
         { label: "Billiard & Snooker", icon: Target },
         { label: "Karaoke & Live Shows", icon: Mic },
         { label: "Co-Working Space", icon: Briefcase },
         { label: "PS5 Gaming", icon: Gamepad2 },
-        { label: "Board Games Galore", icon: Dices },
-        { label: "Poker & Card Games", icon: Spade },
+        { label: "Board Games", icon: Dices },
+        { label: "Card Games", icon: Spade },
         { label: "Chill Vibes Only", icon: Armchair },
         { label: "After-Work Hangout", icon: Users },
         { label: "Fast & Free Wi-Fi", icon: Wifi }
@@ -128,12 +128,12 @@ export default function AboutSection() {
             {/* Ambient Background Glow - Cyan/Blue Mix */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-cyan-500/10 rounded-full blur-[120px] pointer-events-none mix-blend-screen" />
 
-            <div className="max-w-[1600px] mx-auto w-full grid md:grid-cols-[2fr_1fr] gap-6 sm:gap-8 md:gap-10 lg:gap-12 xl:gap-16 items-center relative z-10 px-1 sm:px-2 md:px-2 lg:px-3 h-auto lg:h-full">
+            <div className="max-w-[1600px] mx-auto w-full grid md:grid-cols-[2fr_1fr] lg:grid-cols-2 gap-6 sm:gap-8 md:gap-10 lg:gap-20 items-center relative z-10 px-1 sm:px-2 md:px-2 lg:px-8 h-auto lg:h-full">
 
                 {/* Content Side */}
                 <div
                     className={cn(
-                        "transition-all duration-1000 ease-out order-1 max-w-full md:max-w-[95%] lg:max-w-[90%] pl-4 sm:pl-6 md:pl-8 lg:pl-10",
+                        "transition-all duration-1000 ease-out order-1 flex flex-col justify-center lg:items-start max-w-full md:max-w-[95%] lg:max-w-full pl-4 sm:pl-6 md:pl-8 lg:pl-0",
                         isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-12"
                     )}
                 >
@@ -142,28 +142,28 @@ export default function AboutSection() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6 }}
-                        className="mb-4 md:mb-6 lg:mb-8"
+                        className="mb-4 md:mb-6 lg:mb-12 text-center lg:text-left w-full"
                     >
                         {/* Title - Pure White with Cyan Glow Shadow */}
-                        <h2 className="text-4xl md:text-6xl font-display font-bold tracking-tight text-white leading-tight drop-shadow-[0_2px_15px_rgba(34,211,238,0.2)] text-center">
+                        <h2 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold tracking-tight text-white leading-tight drop-shadow-[0_2px_15px_rgba(34,211,238,0.2)]">
                             Chill, Play & Connect
                         </h2>
                     </motion.div>
 
-                    <div className="grid grid-cols-2 grid-rows-5 gap-x-2 sm:gap-x-3 md:gap-x-4 gap-y-1.5 sm:gap-y-2 md:gap-y-2.5">
+                    <div className="grid grid-cols-2 lg:grid-cols-2 grid-rows-5 lg:grid-rows-none gap-x-2 sm:gap-x-3 md:gap-x-4 lg:gap-x-8 gap-y-1.5 sm:gap-y-2 md:gap-y-2.5 lg:gap-y-8 w-full max-w-2xl mx-auto lg:mx-0">
                         {features.map((feature, i) => {
                             const IconComponent = feature.icon;
 
                             return (
-                                <div key={i} className="flex items-center gap-1 sm:gap-1.5 md:gap-2 group py-0.5">
+                                <div key={i} className="flex items-center gap-1 sm:gap-1.5 md:gap-2 lg:gap-4 group py-0.5 lg:py-0">
                                     <div className="p-0 shrink-0 relative">
                                         {/* Icon Halo - Cyan Glow */}
                                         <div className="absolute inset-0 bg-cyan-400/20 blur-md rounded-full scale-0 group-hover:scale-150 transition-transform duration-300" />
                                         {/* Icon - Cyan 400 Base */}
-                                        <IconComponent className="relative text-cyan-400 w-3 h-3 sm:w-3.5 sm:h-3.5 md:w-4 md:h-4 transition-all duration-300 group-hover:text-white group-hover:scale-110 drop-shadow-[0_0_8px_rgba(34,211,238,0.5)]" />
+                                        <IconComponent className="relative text-cyan-400 w-3 h-3 sm:w-3.5 sm:h-3.5 md:w-4 md:h-4 lg:w-6 lg:h-6 transition-all duration-300 group-hover:text-white group-hover:scale-110 drop-shadow-[0_0_8px_rgba(34,211,238,0.5)]" />
                                     </div>
                                     {/* Text - Slightly larger for better readability */}
-                                    <span className="text-slate-200 group-hover:text-white text-[10px] sm:text-xs md:text-sm font-medium tracking-wide transition-colors duration-300 drop-shadow-[0_1px_3px_rgba(0,0,0,0.8)] break-words">{feature.label}</span>
+                                    <span className="text-slate-200 group-hover:text-white text-[10px] sm:text-xs md:text-sm lg:text-lg font-medium tracking-wide transition-colors duration-300 drop-shadow-[0_1px_3px_rgba(0,0,0,0.8)] break-words">{feature.label}</span>
                                 </div>
                             );
                         })}
@@ -175,7 +175,7 @@ export default function AboutSection() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, delay: 0.2 }}
-                        className="flex flex-col items-center pt-6 md:pt-8"
+                        className="flex flex-col items-center pt-6 md:pt-8 lg:pt-12 w-full"
                     >
                         <div className="flex gap-5">
                             {/* Instagram */}

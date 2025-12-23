@@ -17,9 +17,16 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-black pt-0 pb-10 md:pt-10 md:pb-10 border-t border-white/5 relative overflow-hidden -mt-2 md:mt-0">
-      {/* Background glow effect */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-brand-blue/5 blur-[100px] rounded-full pointer-events-none" />
+    <footer className="relative pt-0 pb-10 md:pt-10 md:pb-10 overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src="/bg11.webp"
+          alt=""
+          className="w-full h-full object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-black/80" />
+      </div>
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="flex flex-col items-center">
@@ -34,7 +41,7 @@ export default function Footer() {
                 window.scrollTo({ top: 0, behavior: 'smooth' });
               }
             }}
-            className="group mb-4 relative h-auto w-48 md:w-60 block cursor-pointer"
+            className="group mb-4 relative h-auto w-32 md:w-40 block cursor-pointer"
           >
             <Image
               src="/chillin-logo.webp"
