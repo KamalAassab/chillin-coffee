@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import { Poppins, Bungee_Spice } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import { Providers } from "./providers";
 
@@ -191,6 +192,7 @@ export default function RootLayout({
             <Footer />
           </SmoothScrolling>
         </Providers>
+        <Analytics />
       </body>
     </html>
   );
