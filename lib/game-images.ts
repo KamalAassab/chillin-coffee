@@ -45,8 +45,8 @@ export const gameImages: Record<string, string> = {
   "uno": "/games/uno.webp",
 
   // Tabletop Games
-  "8ball-pool": "/games/8ballpool.jfif",
-  "snooker": "/games/snooker.jfif",
+  "8ball-pool": "/games/8ballpool.webp",
+  "snooker": "/games/snooker.webp",
 };
 
 /**
