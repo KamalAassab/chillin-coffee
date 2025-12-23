@@ -57,6 +57,11 @@ export default function AboutSection() {
                 if (!videoRef.current) return;
 
                 if (entry.isIntersecting) {
+                    // Lazy load video source
+                    if (videoRef.current.readyState === 0) {
+                        videoRef.current.load();
+                    }
+
                     // Only auto-resume if users have started it and it was playing before scroll
                     if (hasStarted && shouldResume.current) {
                         videoRef.current.play()
@@ -265,7 +270,8 @@ export default function AboutSection() {
                                 // removed autoPlay
                                 loop
                                 playsInline
-                                preload="auto"
+                                preload="none"
+                                poster="/bg1.webp"
                                 className="w-full h-full object-cover"
                                 title="Chillin Coffee Atmosphere - Artisan Coffee, Gaming, and Billiard in Casablanca"
                                 aria-label="A video showing the atmospheric environment of Chillin Coffee café"

@@ -9,7 +9,9 @@ export default function Home() {
     <>
       <HeroSection />
       <CAFSection />
-      <ClientSections />
+      <div style={{ contentVisibility: 'auto', containIntrinsicSize: '1px 5000px' }}>
+        <ClientSections />
+      </div>
     </>
   );
 }
